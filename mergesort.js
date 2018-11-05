@@ -44,11 +44,13 @@ function merge(firstHalf, secondHalf) {
 function mergeSort(array) {
     let tempArray = [];
 
-    if (array.length < 1) {
+    if (array.length <= 1) {
         return array;
     }
    
     tempArray = split(array);
 
-    return merge(mergeSort(tempArray[0]),mergeSort(tempArray[1]));
+    let result = merge(mergeSort(tempArray[0]),mergeSort(tempArray[1]));
+
+    return result;
 } 
