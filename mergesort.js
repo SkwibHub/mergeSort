@@ -32,20 +32,23 @@ function merge(firstHalf, secondHalf) {
     }
 
     if(firstHalf.length === 0){
-        return [...finalArr, ...secondHalf]     
+        return [...finalArr, ...secondHalf];     
     } 
-
     if(secondHalf.length === 0){
-        return [...finalArr, ...firstHalf]  
+        return [...finalArr, ...firstHalf];  
     }
-
 }
 
 
 
 function mergeSort(array) {
+    let tempArray = [];
+
+    if (array.length < 1) {
+        return array;
+    }
    
+    tempArray = split(array);
 
-
-
-} // Hi Dan
+    return merge(mergeSort(tempArray[0]),mergeSort(tempArray[1]));
+} 
