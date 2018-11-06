@@ -16,10 +16,6 @@ function split(wholeArray) {
 
 function merge(firstHalf, secondHalf) {
 
-    /* your code here to define the firstHalf and secondHalf arrays */
-    //firstHalf[0]  secondHalf[0]
-    // finalArr.push(lesser of firstHalf[0] or second........)
-    // push remaining if one array.length is 0;
     let finalArr = [];
     while(firstHalf.length > 0 && secondHalf.length > 0){
         if(firstHalf[0] < secondHalf[0]){
@@ -52,5 +48,6 @@ function mergeSort(array) {
 
     let result = merge(mergeSort(tempArray[0]),mergeSort(tempArray[1]));
 
+    console.log(result);
     return result;
 } 
